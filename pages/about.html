@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Zev</title>
+    <link rel="icon" type="image/png" href="../logo.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        (function() {
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            if (currentTheme === 'light') {
+                document.body.classList.add('light-mode');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="../index.html"><img src="../logo.png" alt="ZX Logo" class="logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="social-icons">
+                <a href="https://github.com/ZevZX/" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/ZevZX" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCLAVlkqJu3zVtNV--pKd_wg" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round">
+                        <span class="moon">🌙</span>
+                        <span class="sun">☀️</span>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="about">
+            <h1>About Me</h1>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hi! I'm Zev, an amateur 19 year old programmer currently living in Germany. The ZX is just there to help differentiate me from other Zevs.
+                        If you're wondering what the ZX stands for, they don't stand for anything.
+                        I chose those letters because they simply sounded cool and because "Zev" was too short as a username for pretty much every website. 
+                        Z is my favourite letter (not biased) and X is probably in my top 3.
+                        Ok technically it comes the LEGO Ninjago Minifigures where each of the ninjas got new armors for marketing reasons midway through Season 1.
+                        These armors were given the title "ZX" and it stands for "Zen eXtreme". These are by far my favourite looks for the ninja in the entire series.
+                        But obviously the ZX on my username doesn't stand for that. Please don't ever refer to me as "ZevZX" just "Zev" is fine, many thanks.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 ZevZX</p>
+        <p>All rights reserved.</p>
+    </footer>
+    <script src="../scripts/theme.js?v=1"></script>
+</body>
+</html>
