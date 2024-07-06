@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
             iframeSrc: "https://zevzx.github.io/DragonBallLegendsTierList/"
         },
         {
-            name: "Volatility",
-            description: "",
+            name: "volatility",
+            description: "A Top-Down Shooter made in Godot Engine by KirbyAndStuff and me. It's still in development but we have a lot of cool features planned! Check out our YouTube channel for devlogs that we post sometimes.",
             githubUrl: "https://github.com/KirbyAndStuff/volatility",
             youtubeUrl: "https://www.youtube.com/@JoyousCastDev",
             youtubeVideos: [
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
             html += `<a href="${project.githubUrl}" target="_blank" class="github-link">Go to Repository</a>`;
         }
         if (project.youtubeUrl) {
-            html += `<a href="${project.youtubeUrl}" target="_blank" class="youtube-link">Watch on YouTube</a>`;
+            html += `<a href="${project.youtubeUrl}" target="_blank" class="youtube-link">Go to YT channel</a>`;
         }
     
         html += `</div>`;
