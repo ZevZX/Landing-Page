@@ -315,7 +315,8 @@ body.light-mode .contact-info a:hover .fab {
 }
 
 body.light-mode .website-link {
-    background-color: #97ffaf;
+    background-color: #28a745;
+    color: #ffffff;
 }
 
 body.light-mode .github-link {
@@ -395,8 +396,8 @@ body.light-mode .github-link {
 }
 
 body.light-mode .github-link {
-    background-color: #ddd;
-    color: #97ffaf;
+    background-color: #28a745;
+    color: #ffffff;
 }
 
 #projects-carousel {
