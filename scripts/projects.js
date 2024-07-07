@@ -26,6 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 "237QkYl1GTk",
                 "FcyyAtVcKqE"
             ]
+        },
+        {
+            name: "Global Earthquake Monitor",
+            description: "A real-time global earthquake monitoring system that visualizes activities on an interactive map.",
+            websiteUrl: "https://zevzx.github.io/GlobalEarthquakeMonitor/",
+            githubUrl: "https://github.com/ZevZX/GlobalEarthquakeMonitor",
+            iframeSrc: "https://zevzx.github.io/GlobalEarthquakeMonitor/"
         }
     ];
 
