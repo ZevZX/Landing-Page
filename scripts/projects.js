@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
             iframeSrc: "https://zevzx.github.io/DragonBallLegendsTierList/"
         },
         {
-            name: "volatility",
-            description: "A Top-Down Shooter made in Godot Engine by KirbyAndStuff and me. It's still in development but we have a lot of cool features planned! Check out our YouTube channel for devlogs that we post sometimes.",
+            name: "VOLATILITY",
+            description: "VOLATILITY is a Top-Down Shooter made in Godot Engine by KirbyAndStuff and me. It's still in development but we have a lot of cool features planned! Check out our YouTube channel for devlogs that we post sometimes.",
             githubUrl: "https://github.com/KirbyAndStuff/volatility",
             youtubeUrl: "https://www.youtube.com/@JoyousCastDev",
             youtubeVideos: [
