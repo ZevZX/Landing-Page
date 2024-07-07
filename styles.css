@@ -508,90 +508,179 @@ body.light-mode .github-link {
     right: 10px;
 }
 
-/* Mobile responsiveness */
+/* Add this to your existing styles.css file or replace the previous mobile styles */
+
 @media screen and (max-width: 768px) {
     body {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     header {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        text-align: left;
-        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
     }
 
     .header-left {
-        grid-row: 1;
-        justify-content: flex-start;
-        margin-bottom: 10px;
+        order: 2;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
     }
 
-    nav {
-        grid-row: 2;
+    .header-left h2 {
+        font-size: 18px;
+        margin-left: 5px;
+    }
+
+    .logo {
+        height: 30px;
     }
 
     .header-right {
-        grid-row: 3;
-        justify-content: flex-start;
-        margin-top: 10px;
+        order: 1;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .social-icons a {
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+
+    .theme-switch {
+        height: 24px;
+        width: 44px;
+    }
+
+    .slider:before {
+        height: 18px;
+        width: 18px;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(20px);
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
     }
 
     nav ul {
-        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        padding: 0;
     }
 
     nav ul li {
-        margin: 5px 0;
+        margin: 0 5px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
     }
 
     main {
-        width: 95%;
-        padding: 0.5rem;
+        width: 100%;
+        padding: 0.3rem;
+        box-sizing: border-box;
     }
 
-    .project-slide iframe {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    .pfp {
+        height: 80px;
+    }
+
+    #project-container {
+        min-height: auto;
+    }
+
+    .project-slide {
         height: auto;
-        min-height: 300px;
+    }
+
+    .iframe-container {
+        height: 60vh;
+        max-height: 400px;
+    }
+
+    .iframe-container iframe {
+        width: 100%;
+        height: 100%;
     }
 
     .youtube-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
         aspect-ratio: auto;
         height: auto;
     }
 
     .youtube-video {
-        padding-top: 56.25%;
-    }
-
-    .carousel-button {
-        padding: 10px;
-        font-size: 18px;
-    }
-
-    #prev-project {
-        left: 5px;
-    }
-
-    #next-project {
-        right: 5px;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 aspect ratio */
     }
 
     .project-links a {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+        padding: 0.3rem 0.6rem;
     }
 
-    .iframe-container {
-        height: 80vh;
-        max-height: none;
-        aspect-ratio: auto;
+    .carousel-button {
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    #prev-project {
+        left: 2px;
+    }
+
+    #next-project {
+        right: 2px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 0.5rem;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .project-slide iframe {
-        min-height: 250px;
+    body {
+        font-size: 12px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 3px;
+    }
+
+    .iframe-container {
+        height: 50vh;
+        max-height: 300px;
     }
 }
