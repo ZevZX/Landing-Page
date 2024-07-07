@@ -31,6 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentProjectIndex = 0;
 
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
     function createProjectSlide(project) {
         const slide = document.createElement('div');
         slide.className = 'project-slide';
@@ -76,10 +80,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function initializeCarousel() {
         projects.forEach((project, index) => {
             const slide = createProjectSlide(project);
-            if (index === 0) {
+            if (index === 0 && !isMobile()) {
                 slide.style.opacity = '1';
                 slide.style.transform = 'translateX(0)';
-            } else {
+            } else if (!isMobile()) {
                 slide.style.opacity = '0';
                 slide.style.transform = 'translateX(100%)';
             }
@@ -88,6 +92,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateCarousel(direction) {
+        if (isMobile()) return;  // Skip carousel functionality on mobile
+
         const slides = document.querySelectorAll('.project-slide');
         const currentSlide = slides[currentProjectIndex];
         
@@ -115,17 +121,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function showNextProject() {
-        updateCarousel('next');
+        if (!isMobile()) updateCarousel('next');
     }
 
     function showPrevProject() {
-        updateCarousel('prev');
+        if (!isMobile()) updateCarousel('prev');
     }
 
-    // Initialize the carousel
-    initializeCarousel();
+    function updateButtonVisibility() {
+        const buttons = document.querySelectorAll('.carousel-button');
+        buttons.forEach(button => {
+            button.style.display = isMobile() ? 'none' : 'block';
+        });
+    }
 
-    // Add event listeners to buttons
+    initializeCarousel();
+    updateButtonVisibility();
+
     nextButton.addEventListener('click', showNextProject);
     prevButton.addEventListener('click', showPrevProject);
+    window.addEventListener('resize', updateButtonVisibility);
 });

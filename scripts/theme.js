@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         moonIcon.style.opacity = isLightMode ? '0' : '1';
         sunIcon.style.opacity = isLightMode ? '1' : '0';
     }
-    // Set initial theme
     setTheme(currentTheme);
     function switchTheme(e) {
         const newTheme = e.target.checked ? 'light' : 'dark';
